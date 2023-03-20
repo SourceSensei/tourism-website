@@ -1,0 +1,94 @@
+html
+    font-size: 10px
+    font-family: $font-stack
+
+a.tour-link
+    text-decoration: none
+    color: inherit
+    
+.intro-heading
+    font-size: 3rem
+    text-align: left
+    margin-left: 1rem
+    font-weight: 700
+    background-image: linear-gradient(to right bottom, $secondary-color, $special-orange-light)
+    -webkit-background-clip: text
+    color: transparent
+    opacity: 1
+    @media only screen and (max-width: 960px)
+        font-size: 2.5rem
+
+.intro-paragraph
+    font-size: 1.5rem
+    text-align: left
+    margin: 1rem
+    font-weight: 400
+    @media only screen and (max-width: 960px)
+        font-size: 1.3rem
+
+.top-tours-heading-container
+    text-align: center
+
+.top-tours-heading
+    font-size: 5rem
+    font-weight: 700
+    background-image: linear-gradient(to right bottom, $secondary-color, $special-orange-light)
+    -webkit-background-clip: text
+    color: transparent
+    opacity: 1
+    margin-bottom: 5rem
+    text-shadow: 0 1rem 2rem rgba(#bbaea5, 0.5)
+
+.copyright-redirect
+    text-decoration: none
+    color: white
+    &:hover
+        @include button-move-top
+        transition: all 0.2s ease-in
+        text-shadow: 0 1rem 2rem rgba(245, 240, 240, 0.9)
+
+    &:active
+        @include button-move-top
+
+.nav-a
+    text-decoration: none
+    color: black
+    &:hover, &:active
+        cursor: pointer
+        color: $special-orange-light
+    
+
+.tour-heading-main
+    font-size: 1.8rem
+    text-align: center
+    margin: 1.5rem 0.25rem
+    font-weight: 700
+    color: white
+    border-bottom: 0.1rem solid #e2e2e2
+    padding: 1rem
+
+
+.price-tour-text
+    font-size: 2.8rem
+    font-weight: 700
+    color: white
+    text-align: center
+    @media only screen and (max-width: 960px)
+        font-size: 2.5rem
+    
+
+h4
+    font-size: 3rem
+    text-align: left
+    @include back-clip
+    margin: 2rem
+    @media only screen and (max-width: 960px)
+        font-size: 2rem
+
+.main-article-text
+    font-size: 1.7rem
+    text-align: center
+    margin: 2rem
+    line-height: 3rem
+    @media only screen and (max-width: 960px)
+        font-size: 1.3rem
