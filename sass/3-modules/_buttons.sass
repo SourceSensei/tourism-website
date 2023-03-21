@@ -1,5 +1,8 @@
+.btn,
 .btn:link,
 .btn:visited
+    border: none
+    cursor: pointer
     text-transform: uppercase
     text-decoration: none
     padding: 1.5rem 4rem
@@ -13,7 +16,9 @@
     box-shadow: 0 1rem 2 rem rgba(0, 0, 0, 0.2)
     color: $special-orange-light
 
-.btn:active
+.btn:active,
+.btn:focus
+    outline: none
     transform: translateY(-1px)
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2)
     color: $special-orange-light

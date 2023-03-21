@@ -19,17 +19,23 @@
   </head>
   <body>
     <div class="navigation">
-      <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+      <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
       <label for="navi-toggle" class="navigation__button">
         <span class="navigation__icon">&nbsp;</span>
       </label>
       <div class="navigation__background">&nbsp;</div>
       <nav class="navigation__nav">
         <ul class="navigation__list">
-          <li class="navigation__item"><a href="index.html" class="navigation__link">Home</a></li>
-          <li class="navigation__item"><a href="tours.html" class="navigation__link">All Tours</a></li>  
-          <li class="navigation__item"><a href="contact.html" class="navigation__link">Contact</a></li>    
-        </ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="index.html" class="navigation__link">Home</a>
+          </li>
+          <li class="navigation__item">
+            <a href="tours.html" class="navigation__link">All Tours</a>
+          </li>
+          <li class="navigation__item">
+            <a href="contact.html" class="navigation__link">Contact</a>
+          </li>
+        </ul>
       </nav>
     </div>
     <div class="header-container">
@@ -41,35 +47,83 @@
         </div>
       </header>
     </div>
-    <div class="form-container">
-      <div class="form-wrap">
-        <h2>
-          Book your tour now or request more information<span
-            class="form-heading-special"
-            >Please note that all tours can be conducted in Russian and English</span
-          >
-        </h2>
-        <form>
-          <div class="form-group">
-            <label for="first-name">First Name</label>
-            <input type="text" name="firstName" id="first-name" />
+    <section class="section-book">
+      <div class="row1">
+        <div class="book">
+          <div class="book__form">
+            <form action="#" class="form">
+              <div class="form-heading">
+                <h2 class="intro-heading">Start Booking Now!</h2>
+              </div>
+              <div class="form__group">
+                <input
+                  type="text"
+                  class="form__input"
+                  placeholder="Full Name"
+                  id="name"
+                  required
+                />
+                <label for="name" class="form__label">Full name</label>
+              </div>
+              <div class="form__group">
+                <input
+                  type="email"
+                  class="form__input"
+                  placeholder="Email address"
+                  id="email"
+                  required
+                />
+                <label for="name" class="form__label">Email address</label>
+              </div>
+              <div class="form__group">
+                <label for="order-description" class="form__label"></label>
+                <textarea
+                  name="orderDescription"
+                  id="order-description"
+                  class="form__input"
+                  placeholder="Tour description"
+                ></textarea>
+              </div>
+              <div class="form__group">
+                <div class="form__group">
+                  <div class="form__radio-group">
+                    <input
+                      type="radio"
+                      class="form__radio-input"
+                      id="small"
+                      name="size"
+                    />
+                    <label for="small" class="form__radio-label">
+                      <span class="form__radio-button"></span>
+                      Small tour group</label
+                    >
+                  </div>
+                  <div class="form__radio-group">
+                    <input
+                      type="radio"
+                      class="form__radio-input"
+                      id="large"
+                      name="size"
+                    />
+                    <label for="large" class="form__radio-label">
+                      <span class="form__radio-button"></span>
+                      Large tour group</label
+                    >
+                  </div>
+                </div>
+                <div class="submit-btn-container">
+                <a href="#" class="submit-link">
+                  <button type="submit" class="btn btn-white">
+                    Submit &rarr;
+                  </button>
+                </a>
+              </div>
+              </div>
+            </form>
           </div>
-          <div class="form-group">
-            <label for="last-name">Last Name</label>
-            <input type="text" name="lastName" id="last-name" />
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" />
-          </div>
-          <div class="form-group">
-            <label for="order-description">Tour Description</label>
-            <textarea name="orderDescription" id="order-description"></textarea>
-          </div>
-          <button type="submit" class="btn">Send</button>
-        </form>
+        </div>
       </div>
-    </div>
+    </section>
     <div class="footer-container">
       <footer class="main-footer">
         <div class="footer-logo-container">
@@ -86,7 +140,8 @@
                 href="https://ninatolkunova.tourister.ru/info"
                 >Nina Tolkunova </a
               ><span class="special-footer-note"
-                >Please note that all tours can be conducted in Russian and English</span
+                >Please note that all tours can be conducted in Russian and
+                English</span
               >
             </p>
           </div>

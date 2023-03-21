@@ -1,91 +1,110 @@
-.form-container
-    margin: 0 auto
-    margin-bottom: -6rem
-    max-width: 80%
-    padding: 6rem
-    overflow: hidden
-    @media only screen and (max-width: 960px)
-        max-width: 95%
-        padding: 2rem
+.section-book
+    padding: 10rem
+    margin-top: 4rem
 
-.form-wrap 
-    background-image: linear-gradient(to right bottom, #ffbb00cf, #ff7830c7)
-    padding: 1.5rem 2.5rem
-    color: white
-    font-size: 1.3rem
-    border-radius: 0.4rem
-    text-align: center
-    letter-spacing: 0.1rem
-    @include cool-shadow
-    @media only screen and (max-width: 960px)
-        box-shadow: none
-        padding: 1rem
+.book
+    background-image: linear-gradient(105deg, rgba(white, 0.9) 0%, rgba(white, 0.9) 50%, transparent 50%), url(../img/2.jpg)
+    background-size: cover
+    border-radius: 3px
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25)
+    height: 60rem
 
-.form-wrap h2
-.form-wrap p 
-    text-align: center
+    &__form
+        width: 50%
+        padding: 6rem
 
-.form-wrap h2
-    font-size: 2.8rem
-    @media only screen and (max-width: 960px)
-        font-size: 2.3rem
+.form
+    &__group:not(:last-child)
+        margin-bottom: 20px
 
-.form-wrap .form-group
-    margin-top: 2rem
-    
+    &__input
+        font-size: 15px
+        font-family: inherit
+        color: inherit
+        padding: 15px 20px
+        border-radius: 2px
+        background-color: rgba(white, 0.5)
+        border: none
+        border-bottom: 3px solid transparent
+        width: 90%
+        display: block
+        transition: all 0.3s
+        &:focus
+            outline: none
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1)
+            border-bottom: 3px solid $special-orange-dark
 
-.form-wrap .form-group label
-    display: block
-    color: white
-    font-size: 1.4rem
-    text-align: left
+        &:focus:invalid
+            border-bottom: 3px solid red
 
-.form-wrap .form-group input 
-    width: 100%
-    padding: 10px
-    margin-top: 0.5rem
-    border: #dddddd 1px solid
-    border-radius: 0.4rem
-    &:focus
-        outline: 0.2rem solid $special-orange-dark
 
-.form-wrap button 
-    width: 15rem
-    padding: 1rem
-    margin-top: 20px
-    color: black
-    cursor: pointer
-    border-color: white
-    border-radius: 0.4rem
-    overflow: hidden
-    letter-spacing: 0.15rem
-    @media only screen and (max-width: 960px)
-        padding: 0.75rem
-        width: 10rem
+        &::-webkit-input-placeholder
+            color: #999
 
-    &:hover
-        @include cool-shadow
-        color: white
-        background-color: $special-orange-dark
+    &__input:focus
+        outline: none
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1)
+        border-bottom: 3px solid $special-orange-dark
 
-    &:active
-        letter-spacing: 0.4rem
-    
+    &__label
+        font-size: 1.2rem
+        font-weight: 700
+        margin-left: 2rem
+        margin-top: 0.7rem
+        display: block
+        text-align: left
+        transition: all 0.3s
 
-      
-#order-description
-    width: 100%
-    height: 10rem
-    border: #dddddd 1px solid
-    border-radius: 0.4rem
-    &:focus
-        outline: 0.2rem solid $special-orange-dark
+    &__input:placeholder-shown + &__label
+        opacity: 0
+        visibility: hidden
+        transform: translateY(-4rem)
 
-.form-group textarea
-    margin-top: 0.5rem
+    &__radio-group
+        width: 49%
+        display: inline-block
 
-.form-heading-special
-    display: inline-block
-    font-size: 2.2rem
-    font-style: italic
-    font-weight: 400
+    &__radio-input
+        display: none
+
+    &__radio-label
+        font-size: 1.6rem
+        cursor: pointer
+        position: relative
+        padding-left: 4.5rem
+
+    &__radio-button
+        height: 3rem
+        width: 3rem
+        border: 5px solid $special-orange-dark
+        border-radius: 50%
+        display: inline-block
+        position: absolute
+        left: 0
+        top: -0.4rem
+
+        &::after
+            content: ""
+            display: block
+            height: 1.3rem
+            width: 1.3rem
+            border-radius: 50%
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            background-color: $special-orange-dark
+            opacity: 0
+            transition: opacity 0.2s
+
+    &__radio-input:checked ~ &__radio-label &__radio-button::after
+        opacity: 1
+
+.form__group
+    margin: 2rem 0
+
+.form__radio-group
+    margin: 2rem 0
+
+.submit-btn-container
+    margin-top: 4rem
